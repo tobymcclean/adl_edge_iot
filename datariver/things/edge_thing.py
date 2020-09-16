@@ -1,9 +1,9 @@
 from os import path
 
-from datariver.utils import get_river_config_uri
+from adl_edge_iot.datariver.utils import get_river_config_uri
 from adlinktech.datariver import DataRiver, JSonTagGroupRegistry, JSonThingClassRegistry, JSonThingProperties
 
-import datariver.utils as eu
+import adl_edge_iot.datariver.utils as eu
 
 
 class EdgeThing(object):

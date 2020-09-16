@@ -4,7 +4,7 @@ import signal
 
 from typing import List, Any
 
-from decorators.contracts import preconditions
+from adl_edge_iot.decorators.contracts import preconditions
 
 from adlinktech.datariver import DataRiver, JSonTagGroupRegistry, JSonThingClassRegistry, JSonThingProperties
 from adlinktech.datariver import as_nvp_seq, IotNvpSeq

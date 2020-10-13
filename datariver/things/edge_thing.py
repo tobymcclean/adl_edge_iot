@@ -1,4 +1,5 @@
 from os import path
+from typing import List
 
 from adl_edge_iot.datariver.utils import get_river_config_uri
 from adlinktech.datariver import DataRiver, JSonTagGroupRegistry, JSonThingClassRegistry, JSonThingProperties
@@ -34,8 +35,8 @@ class EdgeThing(object):
                  properties_str: str = '',
                  tag_group_dir: str = './definitions/TagGroup',
                  thing_class_dir: str = './definitions/ThingClass',
-                 tag_groups: tuple = tuple(),
-                 thing_cls: tuple = tuple()):
+                 tag_groups: List = [],
+                 thing_cls: List = []):
         assert len(properties_str) > 0, f"Config properties must be defined"
         for f in map(lambda tg: path.join(tag_group_dir, f'{tg}.json'), tag_groups):
             assert path.exists(f), f"Can't find Tag Group: {f}"

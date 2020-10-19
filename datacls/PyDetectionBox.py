@@ -60,8 +60,8 @@ class PyDetectionBoxData:
         return self.__x1.float64
 
     @x1.setter
-    def x1(self, value: float) -> float:
-        self.__x1.float64 = value
+    def x1(self, value: float) -> None:
+        self.__x1.float64 = float(value)
 
     @property
     def y1(self) -> float:
@@ -69,7 +69,7 @@ class PyDetectionBoxData:
 
     @y1.setter
     def y1(self, value: float) -> None:
-        self.__y1.float64 = value
+        self.__y1.float64 = float(value)
 
     @property
     def x2(self) -> float:
@@ -77,7 +77,7 @@ class PyDetectionBoxData:
 
     @x2.setter
     def x2(self, value: float) -> None:
-        self.__x2.float64 = value
+        self.__x2.float64 = float(value)
 
     @property
     def y2(self) -> float:
@@ -85,7 +85,7 @@ class PyDetectionBoxData:
 
     @y2.setter
     def y2(self, value: float) -> None:
-        self.__y2.float64 = value
+        self.__y2.float64 = float(value)
 
     @property
     def probability(self) -> float:
@@ -93,7 +93,7 @@ class PyDetectionBoxData:
 
     @probability.setter
     def probability(self, value: float) -> None:
-        self.__probability.float64 = value
+        self.__probability.float64 = float(value)
 
     @property
     def color(self) -> str:
